@@ -3,14 +3,19 @@
 
 <head>
 	<meta charset="UTF-8" />
-	<meta type="viewport" content="width=device-width" />
+	<meta name="viewport" content="width=device-width">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<link rel="stylesheet" href="css/style.css">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css" />
 	<title>Poland travel</title>
 </head>
 
 <body>
+	<div class="back-container"></div>
+	<div class="modal-container hide">
+		<div class="modal-content"></div>
+	</div>
 	<div class="wrapper-main">
 		<div class="main-screen">
 			<div class="wrapper">
@@ -21,21 +26,21 @@
 					</div>
 					<nav class="menu">
 						<ul class="menu-list">
+							<li><a href="/index.html">Home</a></li>
 							<li><a href="#">Guide</a></li>
 							<li><a href="#">Hotels</a></li>
-							<li><a href="#">Journey</a></li>
-							<li><a href="#">Travelers</a></li>
-							<li>
-								<img class="search" src="images/search.png" alt="search">
-							</li>
+							<li><a href="#">Reviews</a></li>
 						</ul>
 					</nav>
+					<div class="burger-container">
+						<div class="burger-item"></div>
+					</div>
 				</div>
 				<div class="main-title">
 					<h1>Fall in love <br />
 						<span> with Poland</span></h1>
 					<p class="subtitle">Best way to find your perfect place in Poland</p>
-					<div class="title__button">Search your place</div>
+					<a href="#find_place" class="title__button">Search your place</a>
 					<p class="suptitle">Popular places to discover</p>
 				</div>
 			</div>
@@ -50,9 +55,9 @@
 					<h6>Małopolskie</h6>
 				</div>
 				<div class="cities__btn">
-					<div class="btn_inner"><a href="">view offers</a></div>
+					<div class="btn_inner place1">view offers</div>
 				</div>
-				<img src="images/place_02.png" alt="">
+				<img src="images/place_02.png" alt="mountains">
 			</div>
 
 			<div class="cities-img">
@@ -61,9 +66,9 @@
 					<h6>Swietokrzyskie</h6>
 				</div>
 				<div class="cities__btn">
-					<div class="btn_inner"><a href="">view offers</a></div>
+					<div class="btn_inner place2">view offers</div>
 				</div>
-				<img src="images/place_03.png" alt="">
+				<img src="images/place_03.png" alt="santomierz">
 			</div>
 
 			<div class="cities-img">
@@ -72,23 +77,22 @@
 					<h6>Pomorskie</h6>
 				</div>
 				<div class="cities__btn">
-					<div class="btn_inner"><a href="">view offers</a></div>
+					<div class="btn_inner place3">view offers</div>
 				</div>
-				<img src="images/place_04.png" alt="">
+				<img src="images/place_04.png" alt="sopot">
 			</div>
-
 			<div class="cities-img">
-				<img src="images/place_05.png" alt=""></div>
+				<img src="images/place_05.png" alt="">
+			</div>
 		</div>
-
-		<div class="page choice">
+		<div class="page choice" id="find_place">
 			<div class="wrap">
 				<div class="choose-travel">
 					<h2>Where you want to go ?</h2>
 					<div class="searching-place">
 						<form>
 							<input type="text" placeholder="Search place" />
-							<img src="images/search.png" alt="search" />
+							<i class="fa fa-search" aria-hidden="true"></i>
 						</form>
 					</div>
 					<div class="choose-place"></div>
@@ -114,8 +118,8 @@
 								of Poland. The testament (ca 1115-1118) of Bolesław III Wrymouth, in which he divided Poland
 								among his sons, designated Sandomierz as the capital of one of the resulting principalities, the
 								Duchy of Sandomierz.</p>
-							<div class="explore__btn">
-								<a href="#">check offers</a>
+							<div class="explore__btn place2">
+								check offers</a>
 							</div>
 						</div>
 						<div class="explore-image">
@@ -131,23 +135,29 @@
 		<div class="page">
 			<div class="enjoyment">
 				<h1>Enjoy your journey</h1>
-				<div class="enjoy__btn"><a class="btn__link" href="#">Sign up</a></div>
-				<p>You can also sign up on our <a class="news__link" href="#">newsletter</a></p>
+				<p>Don`t forget your photo camera</p>
 			</div>
 		</div>
 		<div class="page">
 			<div class="footter">
 				<ul class="footter-list">
+					<h4>Navigation</h4>
 					<li><a href="#">Guide</a></li>
 					<li><a href="#">Hotels</a></li>
 					<li><a href="#">Journey</a></li>
 					<li><a href="#">Travelers</a></li>
 				</ul>
+				<div class="footter-contacts">
+					<h4>Contacts</h4>
+					<h6>Location</h6>
+					<span> 12 Franciszkańska Street, Warsaw</span>
+					<h6>Phone numbers</h6>
+					<span>+48 (22) 123 45 67</span>
+				</div>
 			</div>
 		</div>
 	</div>
-
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="js/toursData.js"></script>
 	<script src="js/script.js"></script>
 </body>
 
