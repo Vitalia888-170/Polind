@@ -1,0 +1,30 @@
+.guide {
+   padding: 15px 30px;
+   background-color: #130f0d;
+}
+.wrapper-guide {
+   max-width: 1440px;
+   width: 100%;
+   margin: 0 auto;
+}
+.comments-container {
+   width: 80%;
+   margin: 0 auto;
+   padding-bottom: 40px;
+}
+.comment-card {
+   width: 100%;
+   padding: 20px;
+   margin: 15px 0;
+   text-align: center;
+   border: 1px solid grey;
+   border-radius: 10px;
+}
+.comment-card h4 {
+   text-transform: capitalize;
+   color: orangered;
+   padding-bottom: 10px;
+}
+.email {
+   color: rgb(119, 117, 117);
+}
