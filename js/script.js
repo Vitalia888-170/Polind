@@ -85,6 +85,8 @@ document.addEventListener("DOMContentLoaded", () => {
             });
             sliderContainer.insertAdjacentHTML("afterbegin", arrow_left);
             sliderContainer.insertAdjacentHTML("beforeend", arrow_right);
+            let contentContainer = document.createElement('div');
+            contentContainer.className = "content-container active";
             let title = document.createElement('h4');
             title.textContent = `${tourData.place}`
             let subtitle1 = document.createElement('h6');
@@ -105,23 +107,32 @@ document.addEventListener("DOMContentLoaded", () => {
             priceStudent.textContent = `Student: ${tourData.priceForStudents} $`;
             let subtitle4 = document.createElement('h6');
             subtitle4.textContent = "Guide";
+            let buttonDetails = document.createElement('button');
+            buttonDetails.className = "btn-navigation btn-details";
+            buttonDetails.textContent = "Info";
+            let buttonSlider = document.createElement('button');
+            buttonSlider.className = "btn-navigation btn-slider";
+            buttonSlider.textContent = "Photos";
             let guide = document.createElement('span');
             guide.textContent = `${tourData.guide}`;
+            contentContainer.append(title);
+            contentContainer.append(subtitle1);
+            contentContainer.append(desc);
+            contentContainer.append(subtitle2);
+            contentContainer.append(details);
+            contentContainer.append(subtitle3);
+            contentContainer.append(priceAdult);
+            contentContainer.append(priceKids);
+            contentContainer.append(priceStudent);
+            contentContainer.append(subtitle4);
+            contentContainer.append(guide);
             modalContent.append(close);
+            modalContent.append(buttonDetails);
+            modalContent.append(buttonSlider);
             modalContent.append(sliderContainer);
-            modalContent.append(title);
-            modalContent.append(subtitle1);
-            modalContent.append(desc);
-            modalContent.append(subtitle2);
-            modalContent.append(details);
-            modalContent.append(subtitle3);
-            modalContent.append(priceAdult);
-            modalContent.append(priceKids);
-            modalContent.append(priceStudent);
-            modalContent.append(subtitle4);
-            modalContent.append(guide);
+            modalContent.append(contentContainer);
       }
-
+      //slider
       function slider() {
             let slidesIndex = 1;
 
@@ -177,6 +188,14 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             if (e.target.classList.contains("place3")) {
                   openCustomModal(10);
+            }
+            if (e.target.classList.contains("btn-details")) {
+                  document.querySelector(".slider-container").classList.remove("active");
+                  document.querySelector(".content-container").classList.add("active");
+            }
+            if (e.target.classList.contains("btn-slider")) {
+                  document.querySelector(".slider-container").classList.add("active");
+                  document.querySelector(".content-container").classList.remove("active");
             }
       });
 });
